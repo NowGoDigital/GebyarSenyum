@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gebyar Hadiah Tabungan Prima Senyum 2027 | BPR Prima Nadi</title>
+<meta name="description" content="Buka Tabungan Prima Senyum BPR Prima Nadi, menangkan 2 Honda PCX, 5 Honda Scoopy, 9 Sepeda Listrik, 9 Smartphone & 9 Smart TV!">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{
+    --blue-900:#082f66; --blue-700:#0b4ea2; --blue-500:#1273d3; --blue-400:#1e9be9;
+    --yellow:#ffc928; --yellow-dark:#f5a800; --ink:#0c2340; --muted:#5b6b85; --bg:#f4f8ff;
+  }
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--ink);background:var(--bg);line-height:1.65}
+  .container{width:min(1100px,92%);margin:auto}
+  img{max-width:100%}
+
+  /* ===== NAVBAR ===== */
+  .navbar{position:sticky;top:0;z-index:100;background:rgba(8,47,102,.92);backdrop-filter:blur(10px);transition:box-shadow .3s}
+  .navbar.scrolled{box-shadow:0 6px 20px rgba(0,0,0,.25)}
+  .navbar .container{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .logo{color:#fff;font-weight:800;font-size:1.15rem;text-decoration:none;line-height:1.1}
+  .logo span{color:var(--yellow)}
+  .logo small{display:block;font-size:.62rem;font-weight:600;color:#bcd7f5;letter-spacing:1px}
+  .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+  .nav-links a{color:#dbeafe;text-decoration:none;font-weight:600;font-size:.92rem;transition:.2s}
+  .nav-links a:hover{color:var(--yellow)}
+
+  /* ===== BUTTONS ===== */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 30px;border-radius:50px;font-weight:800;font-size:1rem;text-decoration:none;border:none;cursor:pointer;transition:.25s;font-family:inherit}
+  .btn-yellow{background:linear-gradient(180deg,#ffd54a,var(--yellow));color:var(--blue-900);box-shadow:0 8px 20px rgba(255,201,40,.35)}
+  .btn-yellow:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(255,201,40,.5)}
+  .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5)}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.12)}
+  .btn-blue{background:linear-gradient(180deg,var(--blue-500),var(--blue-700));color:#fff;box-shadow:0 8px 20px rgba(11,78,162,.35)}
+  .btn-blue:hover{transform:translateY(-3px)}
+
+  /* ===== HERO ===== */
+  .hero{background:linear-gradient(135deg,#082f66 0%,#0b4ea2 45%,#1e9be9 100%);color:#fff;position:relative;overflow:hidden;padding:90px 0 130px}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.13) 1.5px,transparent 1.5px);background-size:26px 26px;opacity:.45;pointer-events:none}
+  .hero .container{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:center;position:relative}
+  .hero-badge{display:inline-block;background:rgba(255,201,40,.15);border:1px solid var(--yellow);color:var(--yellow);font-weight:700;font-size:.78rem;letter-spacing:2px;text-transform:uppercase;padding:8px 18px;border-radius:50px;margin-bottom:18px}
+  .hero h1{font-size:clamp(2.2rem,5.5vw,3.6rem);font-weight:800;line-height:1.12;margin-bottom:10px}
+  .hero h1 .gold{background:linear-gradient(180deg,#ffe27a,var(--yellow));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .sub{font-size:clamp(1.05rem,2vw,1.3rem);font-weight:700;color:#cfe6ff;margin-bottom:14px}
+  .hero p.desc{color:#dbeafe;max-width:520px;margin-bottom:28px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+  .trust-row{display:flex;gap:10px;flex-wrap:wrap}
+  .trust-chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:50px;padding:7px 16px;font-size:.8rem;font-weight:600}
+
+  .hero-visual{position:relative}
+  .prize-stage{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.28);backdrop-filter:blur(8px);border-radius:28px;padding:46px 30px;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.25)}
+  .prize-stage .big{font-size:110px;line-height:1;display:block;filter:drop-shadow(0 14px 24px rgba(0,0,0,.35))}
+  .prize-stage h3{margin-top:14px;font-size:1.3rem;font-weight:800}
+  .prize-stage p{color:#cfe6ff;font-size:.9rem}
+  .ribbon{position:absolute;background:var(--yellow);color:var(--blue-900);font-weight:800;font-size:.85rem;padding:9px 18px;transform:skew(-8deg);border-radius:8px;box-shadow:0 8px 16px rgba(0,0,0,.28);animation:float 4s ease-in-out infinite}
+  .ribbon.r1{top:-16px;left:-10px}
+  .ribbon.r2{bottom:24px;right:-12px;animation-delay:1.2s}
+  .ribbon.r3{top:38%;right:-20px;animation-delay:2s}
+  @keyframes float{0%,100%{translate:0 0}50%{translate:0 -10px}}
+
+  /* ===== COUNTDOWN ===== */
+  .countdown-card{background:#fff;border-radius:22px;box-shadow:0 20px 50px rgba(8,47,102,.15);padding:28px 30px;margin-top:-70px;position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .countdown-card h4{font-size:1.05rem;font-weight:800}
+  .countdown-card h4 span{color:var(--blue-500)}
+  .timer{display:flex;gap:12px}
+  .t-box{background:linear-gradient(180deg,var(--blue-500),var(--blue-700));color:#fff;border-radius:14px;min-width:74px;padding:12px 6px;text-align:center}
+  .t-box b{display:block;font-size:1.7rem;font-weight:800;line-height:1.1}
+  .t-box span{font-size:.66rem;letter-spacing:1.5px;text-transform:uppercase;color:#bcd7f5}
+
+  /* ===== SECTIONS ===== */
+  section{padding:90px 0}
+  .sec-head{text-align:center;max-width:660px;margin:0 auto 52px}
+  .kicker{color:var(--blue-500);font-weight:800;letter-spacing:3px;text-transform:uppercase;font-size:.78rem}
+  .sec-head h2{font-size:clamp(1.7rem,3.6vw,2.5rem);font-weight:800;margin:10px 0 12px}
+  .sec-head p{color:var(--muted)}
+
+  /* ===== HADIAH ===== */
+  .prizes{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:26px}
+  .prize-card{background:#fff;border-radius:20px;padding:38px 20px 28px;text-align:center;box-shadow:0 10px 30px rgba(8,47,102,.08);position:relative;transition:.3s;border:2px solid transparent}
+  .prize-card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(8,47,102,.16)}
+  .prize-card.main{border-color:var(--yellow);background:linear-gradient(180deg,#fffdf4,#fff6d8)}
+  .qty{position:absolute;top:-16px;left:50%;transform:translateX(-50%) skew(-8deg);background:var(--yellow);color:var(--blue-900);font-weight:800;font-size:.85rem;padding:6px 18px;border-radius:8px;box-shadow:0 6px 14px rgba(245,168,0,.35);white-space:nowrap}
+  .prize-card .icon{font-size:58px;line-height:1;display:block;margin-bottom:14px}
+  .prize-card h3{font-size:1.05rem;font-weight:800}
+  .prize-card p{font-size:.85rem;color:var(--muted)}
+  .tag-utama{display:inline-block;margin-top:10px;background:var(--blue-700);color:#fff;font-size:.68rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:50px;text-transform:uppercase}
+
+  /* ===== CARA IKUT ===== */
+  .steps-bg{background:linear-gradient(180deg,#eaf3ff,#f4f8ff)}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .step{background:#fff;border-radius:20px;padding:34px 26px;box-shadow:0 10px 30px rgba(8,47,102,.08);position:relative;transition:.3s}
+  .step:hover{transform:translateY(-6px)}
+  .step-num{width:52px;height:52px;border-radius:16px;background:linear-gradient(135deg,var(--yellow),var(--yellow-dark));color:var(--blue-900);font-weight:800;font-size:1.4rem;display:flex;align-items:center;justify-content:center;margin-bottom:18px;box-shadow:0 8px 18px rgba(245,168,0,.3)}
+  .step h3{font-size:1.1rem;font-weight:800;margin-bottom:8px}
+  .step p{font-size:.92rem;color:var(--muted)}
+
+  /* ===== KEUNGGULAN ===== */
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+  .feature{background:#fff;border-radius:18px;padding:28px 24px;box-shadow:0 8px 24px rgba(8,47,102,.07)}
+  .feature .icon{font-size:38px;margin-bottom:12px;display:block}
+  .feature h3{font-size:1rem;font-weight:800;margin-bottom:6px}
+  .feature p{font-size:.88rem;color:var(--muted)}
+
+  /* ===== FORM ===== */
+  .cta-section{background:linear-gradient(135deg,#082f66,#0b4ea2 55%,#1273d3);color:#fff;position:relative;overflow:hidden}
+  .cta-section::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.1) 1.5px,transparent 1.5px);background-size:24px 24px}
+  .cta-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;position:relative}
+  .cta-grid h2{font-size:clamp(1.7rem,3.5vw,2.4rem);font-weight:800;margin-bottom:14px}
+  .cta-grid h2 .gold{color:var(--yellow)}
+  .cta-grid p{color:#dbeafe;margin-bottom:20px}
+  .checklist{list-style:none}
+  .checklist li{margin-bottom:10px;font-weight:600}
+  .checklist li::before{content:"✅";margin-right:10px}
+  .form-card{background:#fff;border-radius:24px;padding:36px 32px;color:var(--ink);box-shadow:0 24px 60px rgba(0,0,0,.3)}
+  .form-card h3{font-size:1.25rem;font-weight:800;margin-bottom:6px}
+  .form-card > p{font-size:.88rem;color:var(--muted);margin-bottom:22px}
+  .form-group{margin-bottom:16px}
+  .form-group label{display:block;font-size:.82rem;font-weight:700;margin-bottom:6px}
+  .form-group input,.form-group select{width:100%;padding:13px 16px;border:2px solid #e1eaf6;border-radius:12px;font-family:inherit;font-size:.95rem;transition:.2s;background:#f8fbff}
+  .form-group input:focus,.form-group select:focus{outline:none;border-color:var(--blue-400);background:#fff}
+  .form-card .btn{width:100%}
+  .form-note{font-size:.75rem;color:var(--muted);text-align:center;margin-top:12px}
+
+  /* ===== FAQ ===== */
+  .faq-wrap{max-width:760px;margin:auto}
+  details{background:#fff;border-radius:16px;margin-bottom:14px;box-shadow:0 6px 20px rgba(8,47,102,.07);overflow:hidden}
+  summary{cursor:pointer;padding:20px 24px;font-weight:700;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  summary::after{content:"+";font-size:1.4rem;color:var(--blue-500);font-weight:800;transition:.25s}
+  details[open] summary::after{transform:rotate(45deg)}
+  details p{padding:0 24px 20px;color:var(--muted);font-size:.93rem}
+
+  /* ===== FINAL CTA ===== */
+  .final-cta{background:linear-gradient(180deg,#ffd54a,var(--yellow));text-align:center;padding:70px 0}
+  .final-cta h2{font-size:clamp(1.6rem,3.6vw,2.4rem);font-weight:800;color:var(--blue-900);margin-bottom:12px}
+  .final-cta p{color:#5c4a00;font-weight:600;margin-bottom:28px}
+
+  /* ===== FOOTER ===== */
+  footer{background:#06264f;color:#bcd7f5;padding:50px 0 30px;font-size:.88rem}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:36px;margin-bottom:34px}
+  footer h4{color:#fff;font-size:.95rem;margin-bottom:14px}
+  footer a{color:#bcd7f5;text-decoration:none;display:block;margin-bottom:8px;transition:.2s}
+  footer a:hover{color:var(--yellow)}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;text-align:center;font-size:.78rem}
+
+  /* ===== FLOAT WA ===== */
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:99;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:30px;text-decoration:none;box-shadow:0 10px 26px rgba(37,211,102,.45);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+  /* ===== REVEAL ===== */
+  .reveal{opacity:0;transform:translateY(26px);transition:.7s ease}
+  .reveal.visible{opacity:1;transform:none}
+
+  /* ===== RESPONSIVE ===== */
+  @media(max-width:900px){
+    .nav-links{display:none}
+    .hero{padding:60px 0 120px}
+    .hero .container,.cta-grid{grid-template-columns:1fr;text-align:center}
+    .hero p.desc{margin-inline:auto}
+    .hero-cta,.trust-row{justify-content:center}
+    .hero-visual{max-width:420px;margin:20px auto 0}
+    .steps{grid-template-columns:1fr}
+    .countdown-card{justify-content:center;text-align:center}
+    .footer-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
+  <div class="container">
+    <a href="#" class="logo">BPR <span>PRIMA</span><small>PT. BPR PRIMA NADI</small></a>
+    <ul class="nav-links">
+      <li><a href="#hadiah">Hadiah</a></li>
+      <li><a href="#cara">Cara Ikut</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <a href="#daftar" class="btn btn-yellow" style="padding:10px 22px;font-size:.88rem">Buka Tabungan</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div>
+      <span class="hero-badge">🎉 Program Tahun 2027</span>
+      <h1><span class="gold">GEBYAR HADIAH</span><br>Tabungan Prima Senyum</h1>
+      <div class="sub">Tabung Sekarang, Menangkan Hadiah Impianmu!</div>
+      <p class="desc">Semakin rutin Anda menabung dan meningkatkan saldo, semakin besar peluang membawa pulang <b>2 Honda PCX, 5 Honda Scoopy, 9 Sepeda Listrik, 9 Smartphone & 9 Smart TV!</b></p>
+      <div class="hero-cta">
+        <a href="#daftar" class="btn btn-yellow">🚀 Buka Tabungan Sekarang</a>
+        <a href="#hadiah" class="btn btn-ghost">Lihat Semua Hadiah</a>
+      </div>
+      <div class="trust-row">
+        <span class="trust-chip">🛡️ Berizin & Diawasi OJK</span>
+        <span class="trust-chip">✅ Peserta Penjaminan LPS</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="prize-stage">
+        <span class="ribbon r1">2 HONDA PCX</span>
+        <span class="ribbon r2">5 HONDA SCOOPY</span>
+        <span class="ribbon r3">+27 HADIAH LAIN</span>
+        <span class="big">🏍️</span>
+        <h3>Honda PCX Menantimu!</h3>
+        <p>Hadiah utama Gebyar Hadiah 2027</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="container">
+  <div class="countdown-card">
+    <h4>⏳ Periode program berakhir dalam:<br><span>Jangan sampai kelewatan undiannya!</span></h4>
+    <div class="timer">
+      <div class="t-box"><b id="d">0</b><span>Hari</span></div>
+      <div class="t-box"><b id="h">0</b><span>Jam</span></div>
+      <div class="t-box"><b id="m">0</b><span>Menit</span></div>
+      <div class="t-box"><b id="s">0</b><span>Detik</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- HADIAH -->
+<section id="hadiah">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">Banjir Hadiah</span>
+      <h2>34 Hadiah Spektakuler Menanti Anda</h2>
+      <p>Semua nasabah Tabungan Prima Senyum berpeluang menang. Siapa tahu tahun ini giliran Anda!</p>
+    </div>
+    <div class="prizes">
+      <div class="prize-card main reveal"><span class="qty">2 UNIT</span><span class="icon">🏍️</span><h3>Honda PCX</h3><p>Motor premium impian</p><span class="tag-utama">Hadiah Utama</span></div>
+      <div class="prize-card reveal"><span class="qty">5 UNIT</span><span class="icon">🛵</span><h3>Honda Scoopy</h3><p>Stylish & irit banget</p></div>
+      <div class="prize-card reveal"><span class="qty">9 UNIT</span><span class="icon">🚲</span><h3>Sepeda Listrik</h3><p>Hemat & ramah lingkungan</p></div>
+      <div class="prize-card reveal"><span class="qty">9 UNIT</span><span class="icon">📱</span><h3>Smartphone</h3><p>HP canggih terbaru</p></div>
+      <div class="prize-card reveal"><span class="qty">9 UNIT</span><span class="icon">📺</span><h3>Smart TV</h3><p>Layar lebar buat keluarga</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CARA IKUT -->
+<section id="cara" class="steps-bg">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">Gampang Banget</span>
+      <h2>Cuma 3 Langkah Menuju Hadiah</h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><div class="step-num">1</div><h3>Buka Tabungan</h3><p>Isi formulir di bawah atau datang ke kantor BPR Prima Nadi terdekat. Proses cepat, syarat mudah.</p></div>
+      <div class="step reveal"><div class="step-num">2</div><h3>Tingkatkan Saldo</h3><p>Rutin menabung dan tingkatkan terus saldo Tabungan Prima Senyum Anda selama periode program.</p></div>
+      <div class="step reveal"><div class="step-num">3</div><h3>Menangkan Hadiah</h3><p>Ikuti undian tahun 2027 yang dilakukan secara transparan. Semakin besar saldo, semakin besar peluang!</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section>
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="kicker">Kenapa Kami?</span>
+      <h2>Menabung Tanpa Worry di BPR Prima Nadi</h2>
+    </div>
+    <div class="features">
+      <div class="feature reveal"><span class="icon">🛡️</span><h3>Diawasi OJK</h3><p>PT. BPR Prima Nadi berizin dan diawasi langsung oleh Otoritas Jasa Keuangan.</p></div>
+      <div class="feature reveal"><span class="icon">✅</span><h3>Dijamin LPS</h3><p>Simpanan Anda dijamin oleh Lembaga Penjamin Simpanan. Aman dan terpercaya.</p></div>
+      <div class="feature reveal"><span class="icon">⚡</span><h3>Proses Cepat</h3><p>Buka tabungan tanpa ribet, dibantu tim kami yang ramah dan profesional.</p></div>
+      <div class="feature reveal"><span class="icon">🎁</span><h3>Peluang Besar</h3><p>34 hadiah undian — nasabah baru maupun lama sama-sama berpeluang menang.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM CTA -->
+<section id="daftar" class="cta-section">
+  <div class="container cta-grid">
+    <div class="reveal">
+      <h2>AYO! Segera Buka & <span class="gold">Tingkatkan Terus</span> Saldo Tabungan Anda</h2>
+      <p>Daftar sekarang, tim kami akan menghubungi Anda via WhatsApp untuk proses pembukaan tabungan yang cepat dan mudah.</p>
+      <ul class="checklist">
+        <li>Gratis konsultasi & bantuan pembukaan rekening</li>
+        <li>Langsung ikut undian Gebyar Hadiah 2027</li>
+        <li>Uang aman: diawasi OJK & dijamin LPS</li>
+      </ul>
+    </div>
+    <form class="form-card reveal" id="formDaftar">
+      <h3>Daftar Sekarang 🎯</h3>
+      <p>Isi data Anda, kami hubungi secepatnya.</p>
+      <div class="form-group"><label for="nama">Nama Lengkap</label><input type="text" id="nama" placeholder="Contoh: Budi Santoso" required></div>
+      <div class="form-group"><label for="wa">No. WhatsApp</label><input type="tel" id="wa" placeholder="Contoh: 0812xxxxxxx" required></div>
+      <div class="form-group"><label for="opsi">Saya ingin…</label>
+        <select id="opsi">
+          <option>Buka Tabungan Baru</option>
+          <option>Tingkatkan Saldo Tabungan</option>
+          <option>Tanya Info Program</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-yellow">🚀 Daftar & Ikut Undian</button>
+      <p class="form-note">🔒 Data Anda aman & hanya digunakan untuk keperluan program.</p>
+    </form>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container">
+    <div class="sec-head reveal"><span class="kicker">FAQ</span><h2>Pertanyaan yang Sering Diajukan</h2></div>
+    <div class="faq-wrap">
+      <details class="reveal"><summary>Siapa saja yang bisa ikut Gebyar Hadiah?</summary><p>Seluruh nasabah Tabungan Prima Senyum BPR Prima Nadi, baik nasabah lama maupun nasabah baru yang membuka tabungan selama periode program.</p></details>
+      <details class="reveal"><summary>Bagaimana cara meningkatkan peluang menang?</summary><p>Semakin besar dan rutin Anda meningkatkan saldo tabungan selama periode program, semakin besar peluang Anda untuk memenangkan undian.</p></details>
+      <details class="reveal"><summary>Apakah uang tabungan saya aman?</summary><p>Sangat aman. PT. BPR Prima Nadi berizin dan diawasi oleh Otoritas Jasa Keuangan (OJK) serta merupakan peserta penjaminan LPS.</p></details>
+      <details class="reveal"><summary>Kapan pengundian dilakukan?</summary><p>Pengundian dilakukan pada tahun 2027 sesuai periode program, secara transparan dan disaksikan pihak berwenang. Pemenang akan diumumkan resmi oleh BPR Prima Nadi.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <div class="container reveal">
+    <h2>Jangan Cuma Nonton Orang Lain Menang! 🏆</h2>
+    <p>Buka Tabungan Prima Senyum hari ini dan jadilah pemenang berikutnya.</p>
+    <a href="#daftar" class="btn btn-blue">💙 Buka Tabungan Sekarang</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>PT. BPR Prima Nadi</h4>
+        <p>Berizin dan diawasi oleh Otoritas Jasa Keuangan serta merupakan peserta penjaminan LPS.</p>
+      </div>
+      <div>
+        <h4>Navigasi</h4>
+        <a href="#hadiah">Hadiah</a><a href="#cara">Cara Ikut</a><a href="#daftar">Daftar</a><a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Hubungi Kami</h4>
+        <a href="https://www.bprprimanadi.co.id" target="_blank">🌐 www.bprprimanadi.co.id</a>
+        <a href="https://instagram.com/bank_primanadi" target="_blank">📷 @bank_primanadi</a>
+        <a href="https://facebook.com/BPRPrima" target="_blank">📘 BPRPrima</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 PT. BPR Prima Nadi. Seluruh hak cipta dilindungi.</div>
+  </div>
+</footer>
+
+<!-- FLOATING WA -->
+<a class="wa-float" href="https://wa.me/6281234567890?text=Halo%20BPR%20Prima%20Nadi!%20Saya%20tertarik%20ikut%20Gebyar%20Hadiah%202027." target="_blank" aria-label="Chat WhatsApp">💬</a>
+
+<script>
+  // Countdown ke akhir periode program (31 Des 2027)
+  const target = new Date('2027-12-31T23:59:59+07:00').getTime();
+  function tick(){
+    let diff = Math.max(0, target - Date.now());
+    document.getElementById('d').textContent = Math.floor(diff/86400000);
+    document.getElementById('h').textContent = String(Math.floor(diff/3600000)%24).padStart(2,'0');
+    document.getElementById('m').textContent = String(Math.floor(diff/60000)%60).padStart(2,'0');
+    document.getElementById('s').textContent = String(Math.floor(diff/1000)%60).padStart(2,'0');
+  }
+  tick(); setInterval(tick,1000);
+
+  // Navbar shadow saat scroll
+  window.addEventListener('scroll',()=>document.getElementById('navbar').classList.toggle('scrolled',scrollY>10));
+
+  // Animasi reveal on scroll
+  const io = new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('visible');io.unobserve(x.target)}}),{threshold:.15});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // Form daftar -> langsung buka WhatsApp (GANTI NOMOR DI BAWAH INI!)
+  const NOMOR_WA = '6281234567890'; // <-- ganti dengan nomor WA kantor cabang
+  document.getElementById('formDaftar').addEventListener('submit', e=>{
+    e.preventDefault();
+    const nama = document.getElementById('nama').value;
+    const wa   = document.getElementById('wa').value;
+    const opsi = document.getElementById('opsi').value;
+    const msg  = encodeURIComponent(`Halo BPR Prima Nadi! 👋\nSaya ${nama} (WA: ${wa}).\nSaya tertarik: *${opsi}* — Program Gebyar Hadiah Tabungan Prima Senyum 2027.\nMohon info selengkapnya ya. Terima kasih!`);
+    window.open(`https://wa.me/${NOMOR_WA}?text=${msg}`,'_blank');
+  });
+</script>
+</body>
+</html>
