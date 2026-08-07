@@ -203,7 +203,17 @@
     .form-card{padding:22px 16px}
     .hero h1{font-size:clamp(1.8rem,7vw,2.4rem)}
     
-    /* === HADIAH: 1 KOLOM, CARD HORIZONTAL MINIMALIS === */
+    /* === FIX 1: BADGE OJK & LPS BERDAMPINGAN === */
+    .trust-badges{flex-wrap:nowrap;width:100%;gap:8px}
+    .trust-chip{flex:1;text-align:center;font-size:.68rem;padding:8px 6px;line-height:1.35;border-radius:14px}
+    
+    /* === FIX 2: CARD PCX FULL LEBAR LAYAR === */
+    .hero-visual{max-width:none;width:100vw;position:relative;left:50%;transform:translateX(-50%);margin:26px 0 0}
+    .prize-card-hero{border-radius:22px;padding:34px 18px}
+    .floating-tag.t1{left:12px;top:-14px}
+    .floating-tag.t2{right:12px}
+    
+    /* === HADIAH: 1 KOLOM HORIZONTAL === */
     .prizes-grid{grid-template-columns:1fr;gap:10px}
     .prize-item{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 14px;border-radius:16px;border-width:1.5px}
     .prize-item:hover{transform:none}
