@@ -104,20 +104,20 @@
   .prize-item h3{font-size:.98rem;font-weight:800;margin-bottom:4px}
   .prize-item p{font-size:.8rem;color:var(--muted)}
   .tag-main{display:inline-block;margin-top:8px;background:var(--primary);color:#fff;font-size:.6rem;font-weight:700;letter-spacing:1px;padding:4px 12px;border-radius:50px;text-transform:uppercase}
-  /* Collapse & toggle: tersembunyi di desktop */
   .prize-toggle{display:none}
   .prize-expand{display:none}
   
-  /* ===== MINIMALIST STEPS ===== */
-  .steps-section{background:linear-gradient(180deg,#e8f2ff,var(--bg));padding:56px 0}
-  .steps-section .section-header{margin-bottom:28px}
+  /* ===== STEPS SUPER MINIMALIS (HORIZONTAL) ===== */
+  .steps-section{background:linear-gradient(180deg,#e8f2ff,var(--bg));padding:48px 0}
+  .steps-section .section-header{margin-bottom:22px}
   .steps-section .section-header h2{font-size:clamp(1.4rem,2.6vw,1.9rem)}
-  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-  .step-card{background:var(--white);border-radius:16px;padding:22px 18px;box-shadow:var(--shadow-sm);transition:.3s;border:1px solid transparent}
-  .step-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--primary-light)}
-  .step-num{width:42px;height:42px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:var(--primary-dark);font-weight:800;font-size:1.15rem;display:flex;align-items:center;justify-content:center;margin-bottom:12px;box-shadow:0 6px 16px var(--accent-glow)}
-  .step-card h3{font-size:.95rem;font-weight:800;margin-bottom:4px}
-  .step-card p{font-size:.82rem;color:var(--muted);line-height:1.5}
+  .steps-section .section-header p{font-size:.88rem}
+  .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+  .step-card{background:var(--white);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-sm);transition:.3s;border:1px solid transparent;display:flex;align-items:center;gap:12px}
+  .step-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);border-color:var(--primary-light)}
+  .step-num{width:32px;height:32px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-dark));color:var(--primary-dark);font-weight:800;font-size:1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 12px var(--accent-glow)}
+  .step-text h3{font-size:.92rem;font-weight:800;margin-bottom:2px;line-height:1.3}
+  .step-text p{font-size:.78rem;color:var(--muted);line-height:1.5}
   
   /* ===== MINIMALIST FEATURES ===== */
   .features-section{padding:56px 0}
@@ -218,6 +218,14 @@
     .trust-badges{flex-wrap:nowrap;width:100%;gap:8px}
     .trust-chip{flex:1;text-align:center;font-size:.68rem;padding:8px 6px;line-height:1.35;border-radius:14px}
     
+    /* Steps lebih rapat di HP */
+    .steps-section{padding:40px 0}
+    .steps-grid{gap:8px}
+    .step-card{padding:11px 12px;gap:10px;border-radius:12px}
+    .step-num{width:28px;height:28px;font-size:.9rem;border-radius:9px}
+    .step-text h3{font-size:.86rem}
+    .step-text p{font-size:.72rem}
+    
     /* === HADIAH: 1 KOLOM + COLLAPSE === */
     .tap-hint{display:block;margin-top:12px;font-size:.75rem;color:var(--primary);font-weight:700}
     .prizes-grid{grid-template-columns:1fr;gap:10px}
@@ -233,10 +241,8 @@
     .tag-main{margin-top:4px;padding:3px 10px;font-size:.56rem}
     .qty-badge{order:3;position:static;transform:none;flex-shrink:0;padding:5px 12px;font-size:.68rem;background:#fffdf4;border:1.5px solid var(--accent-dark);box-shadow:none}
     .prize-item.featured .qty-badge{background:var(--accent);border-color:transparent;box-shadow:0 4px 12px var(--accent-glow)}
-    /* Panah toggle */
     .prize-toggle{order:4;display:flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#eef5ff;color:var(--primary);font-size:.65rem;flex-shrink:0;transition:.3s}
     .prize-item.open .prize-toggle{transform:rotate(180deg);background:var(--accent);color:var(--primary-dark)}
-    /* Area foto yang collapse */
     .prize-expand{order:5;display:block;flex-basis:100%;max-height:0;opacity:0;overflow:hidden;transition:max-height .45s ease,opacity .4s ease,margin-top .45s ease}
     .prize-item.open .prize-expand{max-height:340px;opacity:1;margin-top:4px}
     .prize-photo{height:150px;border-radius:14px;background:linear-gradient(135deg,#eef5ff,#dcecfd);display:flex;align-items:center;justify-content:center;font-size:64px;overflow:hidden}
@@ -384,7 +390,7 @@
   </div>
 </section>
 
-<!-- CARA IKUT (MINIMALIS) -->
+<!-- CARA IKUT (SUPER MINIMALIS) -->
 <section id="cara" class="steps-section">
   <div class="container">
     <div class="section-header reveal">
@@ -393,9 +399,27 @@
       <p>Proses mudah, cepat, dan tanpa ribet.</p>
     </div>
     <div class="steps-grid">
-      <div class="step-card reveal"><div class="step-num">1</div><h3>Buka Tabungan</h3><p>Isi formulir atau datang ke kantor BPR Prima Nadi terdekat.</p></div>
-      <div class="step-card reveal"><div class="step-num">2</div><h3>Tingkatkan Saldo</h3><p>Rutin menabung selama periode program untuk peluang maksimal.</p></div>
-      <div class="step-card reveal"><div class="step-num">3</div><h3>Menangkan Hadiah</h3><p>Ikuti undian 2027 secara transparan. Semakin besar saldo, semakin besar peluang!</p></div>
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <h3>Buka Tabungan</h3>
+          <p>Isi formulir atau datang ke kantor BPR Prima Nadi terdekat.</p>
+        </div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <h3>Tingkatkan Saldo</h3>
+          <p>Rutin menabung selama periode program untuk peluang maksimal.</p>
+        </div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <h3>Menangkan Hadiah</h3>
+          <p>Ikuti undian 2027 secara transparan. Semakin besar saldo, semakin besar peluang!</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -518,13 +542,12 @@
   const mqMobile = window.matchMedia('(max-width:600px)');
   document.querySelectorAll('.prize-item').forEach(item=>{
     item.addEventListener('click',()=>{
-      if(!mqMobile.matches) return;           // hanya aktif di HP
+      if(!mqMobile.matches) return;
       const wasOpen = item.classList.contains('open');
-      document.querySelectorAll('.prize-item.open').forEach(o=>o.classList.remove('open')); // accordion: tutup yang lain
+      document.querySelectorAll('.prize-item.open').forEach(o=>o.classList.remove('open'));
       if(!wasOpen) item.classList.add('open');
     });
   });
-  // Reset state collapse saat layar dilebarkan ke desktop
   mqMobile.addEventListener('change',e=>{
     if(!e.matches) document.querySelectorAll('.prize-item.open').forEach(o=>o.classList.remove('open'));
   });
