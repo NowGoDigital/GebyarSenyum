@@ -213,13 +213,18 @@
   details[open] summary::after{transform:rotate(45deg);background:var(--primary);color:#fff}
   details p{padding:0 20px 16px;color:var(--muted);font-size:.88rem;line-height:1.7}
   
-  /* ===== FINAL CTA (FOTO + GRADIENT KUNING BERTUMPUK) ===== */
+  /* ===== FINAL CTA (FOTO DIPERKECIL + LEBIH JELAS) ===== */
   .final-cta{
-    background:
-      /* Lapisan 1 (atas): gradient kuning — turunkan angka .88 biar foto makin terlihat */
-      linear-gradient(135deg, rgba(255,201,40,.88), rgba(245,168,0,.88)),
-      /* Lapisan 2 (bawah): foto latar — ganti nama file sesuai foto kamu */
-      url('bg-final.png') center/cover no-repeat;
+    background-color:var(--accent-dark); /* dasar kuning solid biar tepi foto menyatu mulus */
+    background-image:
+      /* Lapisan atas: kuning .72 (lebih transparan = foto LEBIH JELAS) */
+      linear-gradient(135deg, rgba(255,201,40,.72), rgba(245,168,0,.72)),
+      /* Lapisan bawah: foto bg-final.jpg */
+      url('bg-final.jpg');
+    background-position:center, center;
+    /* Foto DIPERKECIL: hanya 70% lebar section, utuh, di tengah */
+    background-size:auto, 70% auto;
+    background-repeat:repeat, no-repeat;
     text-align:center;padding:64px 0;position:relative;overflow:hidden;
   }
   .final-cta::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,0.15) 0%,transparent 60%);pointer-events:none}
@@ -298,6 +303,9 @@
     footer{padding:20px 0 12px}
     .footer-grid{margin-bottom:11px}
     .footer-bottom{padding-top:9px}
+    
+    /* Foto final-cta di HP: 92% lebar biar tetap proporsional */
+    .final-cta{background-size:auto, 92% auto}
     
     /* === HADIAH: 1 KOLOM + COLLAPSE === */
     .tap-hint{display:block;margin-top:12px;font-size:.75rem;color:var(--primary);font-weight:700}
@@ -595,7 +603,7 @@
   </div>
 </section>
 
-<!-- FINAL CTA (FOTO LATAR + KUNING) -->
+<!-- FINAL CTA (FOTO DIPERKECIL + LEBIH JELAS) -->
 <section class="final-cta">
   <div class="container reveal">
     <h2>Jangan Cuma Nonton Orang Lain Menang! 🏆</h2>
@@ -618,7 +626,7 @@
 </footer>
 
 <!-- FLOATING WA -->
-<a class="wa-float" href="https://wa.me/628175761165?text=Halo%20BPR%20Prima%20Nadi!%20Saya%20tertarik%20ikut%20Gebyar%20Hadiah%202027." target="_blank" aria-label="Chat WhatsApp">💬</a>
+<a class="wa-float" href="https://wa.me/6281234567890?text=Halo%20BPR%20Prima%20Nadi!%20Saya%20tertarik%20ikut%20Gebyar%20Hadiah%202027." target="_blank" aria-label="Chat WhatsApp">💬</a>
 
 <script>
   // Countdown ke akhir periode program (30 Apr 2027)
@@ -654,7 +662,7 @@
   });
 
   // Form daftar -> langsung buka WhatsApp (GANTI NOMOR DI BAWAH INI!)
-  const NOMOR_WA = '628175761165';
+  const NOMOR_WA = '6281234567890';
   document.getElementById('formDaftar').addEventListener('submit', e=>{
     e.preventDefault();
     const nama = document.getElementById('nama').value;
