@@ -15,8 +15,8 @@
 <meta property="og:locale" content="id_ID">
 <meta property="og:title" content="Gebyar Hadiah Tabungan Prima Senyum 2027 | BPR Prima Nadi">
 <meta property="og:description" content="Menangkan 2 Honda PCX, 5 Honda Scoopy, 9 Sepeda Listrik, 9 Smartphone & 9 Smart TV! Buka tabungan sekarang — berizin OJK & dijamin LPS.">
-<meta property="og:url" content="https://nowgodigital.github.io/GebyarSenyum/"> <!-- ⚠️ GANTI dengan URL lengkap halaman ini -->
-<meta property="og:image" content="https://nowgodigital.github.io/GebyarSenyum/og-banner.jpg"> <!-- ⚠️ GANTI sesuai domain & nama file banner -->
+<meta property="og:url" content="https://nowgodigital.github.io/GebyarSenyum/">
+<meta property="og:image" content="https://nowgodigital.github.io/GebyarSenyum/og-banner.jpg">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -25,10 +25,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gebyar Hadiah Tabungan Prima Senyum 2027 | BPR Prima Nadi">
 <meta name="twitter:description" content="34 hadiah spektakuler menanti! Buka tabungan sekarang — berizin OJK & dijamin LPS.">
-<meta name="twitter:image" content="https://nowgodigital.github.io/og-banner.jpg">
+<meta name="twitter:image" content="https://nowgodigital.github.io/GebyarSenyum/og-banner.jpg">
 <!-- Warna address bar browser HP -->
 <meta name="theme-color" content="#062a5c">
-<link rel="canonical" href="https://nowgodigital.github.io/">
+<link rel="canonical" href="https://nowgodigital.github.io/GebyarSenyum/">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Barlow+Condensed:wght@600;700;800&display=swap" rel="stylesheet">
@@ -213,8 +213,20 @@
   details[open] summary::after{transform:rotate(45deg);background:var(--primary);color:#fff}
   details p{padding:0 20px 16px;color:var(--muted);font-size:.88rem;line-height:1.7}
   
-  /* ===== FINAL CTA ===== */
-  .final-cta{background:linear-gradient(135deg,var(--accent),var(--accent-dark));text-align:center;padding:64px 0;position:relative;overflow:hidden}
+  /* ===== FINAL CTA (FOTO DIPERKECIL + LEBIH JELAS) ===== */
+  .final-cta{
+    background-color:var(--accent-dark); /* dasar kuning solid biar tepi foto menyatu mulus */
+    background-image:
+      /* Lapisan atas: kuning .72 (lebih transparan = foto LEBIH JELAS) */
+      linear-gradient(135deg, rgba(255,201,40,.72), rgba(245,168,0,.72)),
+      /* Lapisan bawah: foto bg-final.png */
+      url('bg-final.png');
+    background-position:center, center;
+    /* Foto DIPERKECIL: hanya 70% lebar section, utuh, di tengah */
+    background-size:auto, 70% auto;
+    background-repeat:repeat, no-repeat;
+    text-align:center;padding:64px 0;position:relative;overflow:hidden;
+  }
   .final-cta::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle at 50% 50%,rgba(255,255,255,0.15) 0%,transparent 60%);pointer-events:none}
   .final-cta h2{font-size:clamp(1.5rem,3vw,2.2rem);font-weight:800;color:var(--primary-dark);margin-bottom:10px;position:relative;z-index:2}
   .final-cta p{color:#5c4a00;font-weight:600;font-size:1rem;margin-bottom:24px;position:relative;z-index:2}
@@ -291,6 +303,9 @@
     footer{padding:20px 0 12px}
     .footer-grid{margin-bottom:11px}
     .footer-bottom{padding-top:9px}
+    
+    /* Foto final-cta di HP: 92% lebar biar tetap proporsional */
+    .final-cta{background-size:auto, 92% auto}
     
     /* === HADIAH: 1 KOLOM + COLLAPSE === */
     .tap-hint{display:block;margin-top:12px;font-size:.75rem;color:var(--primary);font-weight:700}
@@ -580,8 +595,8 @@
   <div class="container">
     <div class="section-header reveal"><span class="kicker">FAQ</span><h2>Pertanyaan yang Sering Diajukan</h2></div>
     <div class="faq-wrap">
-      <details class="reveal"><summary>Syarat dan Ketentuan?</summary><p>.</p></details>
-      <details class="reveal"><summary>Siapa saja yang bisa ikut Gebyar Hadiah?</summary><p>Seluruh nasabah Tabungan Prima Senyum BPR Prima Nadi (area Lombok), baik nasabah lama maupun baru.</p></details>
+      <details class="reveal"><summary>Syarat & Ketentuan?</summary><p></p></details>
+      <details class="reveal"><summary>Siapa saja yang bisa ikut Gebyar Hadiah?</summary><p>Seluruh nasabah Tabungan Prima Senyum BPR Prima Nadi, baik nasabah lama maupun baru.</p></details>
       <details class="reveal"><summary>Bagaimana cara meningkatkan peluang menang?</summary><p>Semakin besar dan rutin Anda meningkatkan saldo tabungan, semakin besar peluang memenangkan undian.</p></details>
       <details class="reveal"><summary>Apakah uang tabungan saya aman?</summary><p>Sangat aman. PT. BPR Prima Nadi berizin dan diawasi OJK serta peserta penjaminan LPS.</p></details>
       <details class="reveal"><summary>Kapan pengundian dilakukan?</summary><p>Pengundian dilakukan pada tahun 2027 secara transparan dan disaksikan pihak berwenang.</p></details>
@@ -589,7 +604,7 @@
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- FINAL CTA (FOTO DIPERKECIL + LEBIH JELAS) -->
 <section class="final-cta">
   <div class="container reveal">
     <h2>Jangan Cuma Nonton Orang Lain Menang! 🏆</h2>
